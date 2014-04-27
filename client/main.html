@@ -1,0 +1,99 @@
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
+  <title>Categorizing You!</title>
+</head>
+
+<body>
+  <div class="container-fluid">
+      {{> header}}
+      {{#if currentUser}}
+        {{> viewLogged }}
+        {{> allUsers}}
+      {{else}}
+        {{> viewNotLogged }}
+      {{/if}}
+  </div>  
+  
+  <footer>
+    <hr/>
+    Jordi Llobet - tm12566
+  </footer>
+</body>
+
+<template name="header">
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6">
+          <h4 id="main-title">Meteor Chat</h4>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6">
+            {{ > loginButtons }}
+        </div>
+      </div>
+    </div>
+  </nav>
+</template>
+
+<template name="viewLogged">  
+  <div class="jumbotron extra-top">
+    <h1>Hi {{name}}</h1>
+  </div>
+  
+</template>
+
+
+<template name="viewNotLogged">
+  <div class="jumbotron extra-top">
+    <h1 class="txt-center">This is a simple application that gets the information from your facebook account, and lets you to chat with all the people logged in to this app</h1>
+  </div>
+</template>
+
+
+
+<template name="allUsers">
+  <h4>All users</h4>
+  
+  <div clas="container">
+    <div class="row">
+      <div id="pictures-users" class="col-xs-12 col-sm-6 col-md-6">
+        {{#each users}}
+          <!-- {{profile.name}} -->
+          <a href="{{services.facebook.link}}">
+          <img src="http://graph.facebook.com/{{services.facebook.id}}/picture/?type=large" />    
+          </a>
+        {{/each}}
+      </div>
+      
+      <div class="col-xs-12 col-sm-6 col-md-6">
+        {{> chatBox}}
+      </div>
+    </div>
+  </div>
+</template>
+
+
+<template name="chatBox">
+  <form role="form" id="add-message">
+    <div class="form-group">
+      <textarea class="form-control" id="message-input" rows="3" placeholder="Just write your message here..."></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary" style="float:right;">Sign in</button>
+  </form>
+  <div class="clean"></div>
+  <ul id="messages-list">
+    {{#each messages}}
+      <li>
+        <div class="row">
+          <div class="col-xs-3 col-sm-3 col-md-2">
+            <img class="circular" src="http://graph.facebook.com/{{author.services.facebook.id}}/picture/?type=large" />
+          </div>
+          <div class="col-xs-9 col-sm-9 col-md-10">
+            <div class="msg-author">{{author.profile.name}}</div>
+            <div class="msg-body">{{body}}</div>
+          </div>
+        </div>
+      </li>
+    {{/each}}
+  </ul>
+</template>

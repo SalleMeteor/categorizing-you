@@ -1,0 +1,55 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "foursquare": {},
+      "accounts-foursquare": {},
+      "npm": {},
+      "router": {},
+      "client-call": {},
+      "bootstrap-3": {}
+    },
+    "packages": {
+      "foursquare": {
+        "git": "https://github.com/SimonEngelhardt/meteor-foursquare.git",
+        "tag": "v0.0.2",
+        "commit": "df1a4dfc6b57d455c1cec936a8e32be21fde96ee"
+      },
+      "accounts-foursquare": {
+        "git": "https://github.com/pius/meteor-accounts-foursquare.git",
+        "tag": "v1.0.1",
+        "commit": "75db036bb2c4c3ddb0a15715f847e71f6e7b4d1a"
+      },
+      "npm": {
+        "git": "https://github.com/arunoda/meteor-npm.git",
+        "tag": "v0.2.6",
+        "commit": "177ab6118de5bf8cffb19481343d5762ff7a2aaf"
+      },
+      "router": {
+        "git": "https://github.com/tmeasday/meteor-router.git",
+        "tag": "v0.6.1",
+        "commit": "8ec75fec7affdefc787d19f23b36fd6d1d44ef04"
+      },
+      "client-call": {
+        "git": "https://github.com/subhog/meteor-client-call.git",
+        "tag": "v0.2.0",
+        "commit": "c6fd2429879002195010caca0a9b9cc3f10c51bb"
+      },
+      "bootstrap-3": {
+        "git": "https://github.com/mangasocial/meteor-bootstrap-3.git",
+        "tag": "v3.1.1-1",
+        "commit": "63dd38968828bb8963636df93e9a1c45e2dfe67e"
+      },
+      "page-js-ie-support": {
+        "git": "https://github.com/tmeasday/meteor-page-js-ie-support.git",
+        "tag": "v1.3.5",
+        "commit": "b99ed8380aefd10b2afc8f18d9eed4dd0d8ea9cb"
+      },
+      "HTML5-History-API": {
+        "git": "https://github.com/tmeasday/meteor-HTML5-History-API.git",
+        "tag": "v4.0.0",
+        "commit": "dc4965f1424cfca625ec3fbea17eace03f8e32c5"
+      }
+    }
+  }
+}

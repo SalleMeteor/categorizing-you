@@ -1,0 +1,10 @@
+{
+  "packages": {
+    "foursquare": {},
+    "accounts-foursquare": {},
+    "npm": {},
+    "router": {},
+    "client-call": {},
+    "bootstrap-3": {}
+  }
+}
